@@ -5,4 +5,8 @@ describe('Thermostat class', () => {
     const thermostat = new Thermostat();
     expect(thermostat.getTemperature()).toEqual(20);
   });
+  it('Increases temperature by 1', () => {
+    const thermostat = new Thermostat();
+    expect(thermostat.up()).toBeGreaterThan(20);
+  });
 });
