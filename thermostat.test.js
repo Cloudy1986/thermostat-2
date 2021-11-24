@@ -5,12 +5,18 @@ describe('Thermostat class', () => {
     const thermostat = new Thermostat();
     expect(thermostat.getTemperature()).toEqual(20);
   });
-  it('Increases temperature by 1', () => {
+  it('Increases temperature by 3', () => {
     const thermostat = new Thermostat();
-    expect(thermostat.up()).toBeGreaterThan(20);
+    thermostat.up()
+    thermostat.up()
+    thermostat.up()
+    expect(thermostat.getTemperature()).toBeGreaterThan(22);
   });
-  it('decreases temperature by 1', () => {
+  it('decreases temperature by 3', () => {
     const thermostat = new Thermostat();
-    expect(thermostat.down()).toBeLessThan(20);
+    thermostat.down()
+    thermostat.down()
+    thermostat.down()
+    expect(thermostat.getTemperature()).toBeLessThan(18);
   });
 });
