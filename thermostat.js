@@ -1,3 +1,5 @@
+// up and down methods only implements once to 20
+
 class Thermostat {
   constructor() {
     this.temperature = 20;
@@ -7,6 +9,9 @@ class Thermostat {
   }
   up() {
     return this.temperature + 1;
+  }
+  down() {
+    return this.temperature - 1;
   }
 }
 

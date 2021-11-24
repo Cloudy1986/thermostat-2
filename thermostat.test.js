@@ -9,4 +9,8 @@ describe('Thermostat class', () => {
     const thermostat = new Thermostat();
     expect(thermostat.up()).toBeGreaterThan(20);
   });
+  it('decreases temperature by 1', () => {
+    const thermostat = new Thermostat();
+    expect(thermostat.down()).toBeLessThan(20);
+  });
 });
